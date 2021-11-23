@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: springboot_eureca_container
+    image: taxi-eureca
+    build:
+      context: ./
+      dockerfile: ./docker/app/Dockerfile
+    ports:
+      - "8761:8761"
+    restart: always
